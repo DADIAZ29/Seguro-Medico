@@ -1,0 +1,26 @@
+
+<nav th:fragment="navbar" class="bg-neutral-primary w-full border-b border-default">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        <a th:href="@{https://www.confiamed.com/}" class="flex items-center space-x-1 rtl:space-x-reverse">
+            <img src="https://www.confiamed.com/wp-content/uploads/2023/05/confiamed.png" class="h-8" alt="Confiamed Logo" />
+            <span class="flex flex-col text-blue-900 font-semibold">
+    <span class="text-xl">CONFIAMED</span>
+    <span class="text-lg">Asistencia Medica</span>
+  </span>
+        </a>
+        <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+                <li>
+                    <a routerLink="/" class="block py-2 px-3 text-blue-400 bg-brand rounded md:bg-transparent md:text-fg-brand md:p-0" aria-current="page">Home</a>
+                </li>
+
+                <li>
+                    <a routerLink="servicios"  class="block py-2 px-3 text-blue-400 rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Servicios</a>
+                </li>
+                <li>
+                    <a routerLink="nosotros" class="block py-2 px-3 text-blue-400 rounded hover:bg-neutral-tertiary md:hover:bg-transparent md:border-0 md:hover:text-fg-brand md:p-0 md:dark:hover:bg-transparent">Nosotros</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
