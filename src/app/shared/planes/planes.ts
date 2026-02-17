@@ -3,16 +3,14 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-servicios',
   imports: [],
-  templateUrl: './servicios.html',
-  styleUrl: './servicios.css',
+  templateUrl: './planes.html',
+  styleUrl: './planes.css',
 })
 export class Servicios {
 
   subtitulo: string = 'Elige el plan que más te convenga';
 
   servicioSeleccionado: string = 'ninguno';
-
-
 
   servicios = [
     {

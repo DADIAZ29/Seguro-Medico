@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { Hero } from "../../shared/hero/hero";
-import { Servicios } from "../../shared/servicios/servicios";
-import { Nosotros } from "../../shared/nosotros/nosotros";
+import { Servicios } from "../../shared/planes/planes";
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, Servicios, Nosotros],
+  imports: [Hero, Servicios],
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
