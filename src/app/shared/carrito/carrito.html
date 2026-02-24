@@ -1,0 +1,40 @@
+<div class="max-w-lg mx-auto bg-white shadow-lg rounded-lg p-6">
+  <h2 class="text-xl font-bold text-blue-600 mb-4">Carrito de Compras</h2>
+
+  <table class="w-full text-sm mb-4">
+    <thead>
+      <tr class="border-b">
+        <th class="text-left py-2">Producto</th>
+        <th class="text-center py-2">Cantidad</th>
+        <th class="text-right py-2">Precio</th>
+        <th class="text-right py-2">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of productos" class="border-b">
+        <td>{{ p.nombre }}</td>
+        <td class="text-center">{{ p.cantidad }}</td>
+        <td class="text-right">$ {{ p.precio * p.cantidad }}</td>
+        <td class="text-right">
+          <button (click)="eliminar(p.id)" class="text-red-600 hover:underline">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Factura previa -->
+  <div class="space-y-2 text-right">
+    <p>Subtotal: <span class="font-semibold">$ {{ subtotal }}</span></p>
+    <p>IVA (15%): <span class="font-semibold">$ {{ iva }}</span></p>
+    <p>Total a pagar: <span class="font-bold text-blue-600">$ {{ total }}</span></p>
+  </div>
+
+  <div class="flex justify-between mt-4">
+    <button (click)="limpiar()" class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600">
+      Vaciar Carrito
+    </button>
+    <button class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+      Generar Factura
+    </button>
+  </div>
+</div>

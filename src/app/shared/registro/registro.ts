@@ -18,12 +18,12 @@ export class RegistroComponent {
 
   // Objeto del usuario vinculado al formulario
   nuevoUsuario: Usuario = {
-    asunto: '',
     nombre: '',
     apellidos: '',
     email: '',
     celular: '',
-    descripcion: ''
+    password: '',
+    rol: 'EMPLEADO', 
   };
 
   // Controla si estamos editando un registro
@@ -73,12 +73,13 @@ export class RegistroComponent {
   // Método para limpiar el formulario
   resetear() {
     this.editando = false;
-    this.nuevoUsuario = { asunto: '',
+    this.nuevoUsuario = { 
       nombre: '',
       apellidos: '',
       email: '',
       celular: '',
-      descripcion: ''
+      password: '',
+      rol: 'EMPLEADO'
     };
   }
 }
