@@ -11,7 +11,7 @@ export class UsuarioService {
   private http = inject(HttpClient);
 
   
-  private API_USUARIOS = 'https://seguro-medico-5c8c1-default-rtdb.firebaseio.com/';
+  private API_USUARIOS = 'http://localhost:8080/usuarios';
 
   // Método GET 
   getUsuarios(): Observable<Usuario[]> {
